@@ -1,0 +1,39 @@
+{
+	"name": "Web Factor",
+
+	"contentRepositoryConnection": {
+		"type": "PRISMIC",
+		"repositoryId": "https://web-factor-2020.cdn.prismic.io/api"
+	},
+
+	"locationSettings": {
+		"locale": "nl_BE",
+		"timeZone": "Europe/Brussels"
+	},
+
+	"templates": [
+		{
+			"name": "main",
+			"contents": "templates/main.ftl"
+		}
+	],
+
+	"errorPage": {
+		"name": "Fout",
+		"template": "main",
+		"inserts": {
+			"contents": "pages/error.ftl"
+		}
+	},
+
+	"pages": [
+		{
+			"friendlyUrl": "home",
+			"name": "Home",
+			"template": "main",
+			"inserts": {
+				"contents": "pages/home.ftl"
+			}
+		}
+	]
+}
