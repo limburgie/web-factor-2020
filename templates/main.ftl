@@ -88,15 +88,18 @@
 							<li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
 								<a href="#contact" class="nav-link p-0">${i18n["contact"]}</a>
 							</li>
-                            <#if request.locale.language == "nl">
-								<li class="nav-item g-ml-15--lg g-mb-7 g-mb-0--lg">
-									<a href="/lang/en_US" class="nav-link p-0"><img src="/assets/img/flag-en.png" style="height: 16px; margin-bottom: 1px;"/> English</a>
-								</li>
-                            <#else>
-								<li class="nav-item g-ml-15--lg g-mb-7 g-mb-0--lg">
-									<a href="/lang/nl_BE" class="nav-link p-0"><img src="/assets/img/flag-nl.png" style="height: 16px; margin-bottom: 1px;"/> Nederlands</a>
-								</li>
-                            </#if>
+						</ul>
+					</div>
+					<div class="g-pos-abs g-top-18 g-right-65 g-pos-rel--lg g-top-0--lg g-right-0--lg g-width-50 g-ml-50 g-ml-12--lg g-font-size-12">
+						<a href="#" id="languages-dropdown-invoker-2" class="g-color-gray-dark-v3 g-text-underline--none--hover" aria-controls="languages-dropdown-2" aria-haspopup="true" aria-expanded="false" data-dropdown-event="click" data-dropdown-target="#languages-dropdown-2" data-dropdown-type="css-animation" data-dropdown-duration="500" data-dropdown-hide-on-scroll="false" data-dropdown-animation-in="fadeIn" data-dropdown-animation-out="fadeOut">
+							${request.locale.language?upper_case}&nbsp;<i class="fa fa-angle-down g-ml-3"></i>
+						</a>
+						<ul id="languages-dropdown-2" class="list-unstyled text-left u-shadow-v23 g-pos-abs g-left-0 g-bg-white g-width-75 g-z-index-2 g-py-20 g-pb-15 g-mt-25--lg g-mt-20--lg--scrolling u-dropdown--css-animation u-dropdown--hidden" aria-labelledby="languages-dropdown-invoker-2" style="animation-duration: 500ms; left: 0px;">
+							<li>
+								<a class="d-block g-color-main g-color-gray-dark-v3 g-color-primary--hover g-text-underline--none--hover g-py-8 g-px-20" href="/lang/${(request.locale.language == 'nl')?then('en_US', 'nl_BE')}">
+									${(request.locale.language == 'nl')?then('EN', 'NL')}
+								</a>
+							</li>
 						</ul>
 					</div>
 					<!-- End Navigation -->
@@ -523,6 +526,7 @@
 <script src="/assets/js/components/hs.scroll-nav.js"></script>
 <script src="/assets/js/components/hs.counter.js"></script>
 <script src="/assets/js/components/hs.carousel.js"></script>
+<script src="/assets/js/components/hs.dropdown.js"></script>
 <script src="/assets/js/components/hs.popup.js"></script>
 <script src="/assets/js/components/hs.cubeportfolio.js"></script>
 <script src="/assets/js/components/hs.go-to.js"></script>
@@ -535,6 +539,9 @@
 	$(document).on('ready', function () {
 		// initialization of carousel
 		$.HSCore.components.HSCarousel.init('.js-carousel');
+
+		// initialization of HSDropdown component
+		$.HSCore.components.HSDropdown.init($('[data-dropdown-target]'));
 
 		// initialization of header
 		$.HSCore.components.HSHeader.init($('#js-header'));
