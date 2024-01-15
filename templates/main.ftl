@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="${request.locale.language}">
 <head>
 	<title>Web Factor</title>
 
@@ -95,11 +95,13 @@
 							${request.locale.language?upper_case}&nbsp;<i class="fa fa-angle-down g-ml-3"></i>
 						</a>
 						<ul id="languages-dropdown-2" class="list-unstyled text-left u-shadow-v23 g-pos-abs g-left-0 g-bg-white g-width-75 g-z-index-2 g-py-20 g-pb-15 g-mt-25--lg g-mt-20--lg--scrolling u-dropdown--css-animation u-dropdown--hidden" aria-labelledby="languages-dropdown-invoker-2" style="animation-duration: 500ms; left: 0px;">
-							<li>
-								<a class="d-block g-color-main g-color-gray-dark-v3 g-color-primary--hover g-text-underline--none--hover g-py-8 g-px-20" href="/lang/${(request.locale.language == 'nl')?then('en_US', 'nl_BE')}">
-									${(request.locale.language == 'nl')?then('EN', 'NL')}
-								</a>
-							</li>
+							<#list site.locales as locale>
+                                <li>
+                                    <a class="d-block g-color-main g-color-gray-dark-v3 g-color-primary--hover g-text-underline--none--hover g-py-8 g-px-20" href="${uri.ofCurrent(locale.language)}">
+                                        ${locale.language?upper_case}
+                                    </a>
+                                </li>
+							</#list>
 						</ul>
 					</div>
 					<!-- End Navigation -->
@@ -424,7 +426,7 @@
 					<a href="mailto:peter@web-factor.be">peter@web-factor.be</a>
 				</p>
 				<p class="g-color-gray-dark-v4 g-font-size-12 mb-0">
-					<strong>${i18n['vat']}</strong> BE 0735 515 366<br/>
+					<strong>${i18n['vat']}</strong> BE0735515366<br/>
 					<strong>IBAN</strong> BE17 0018 7109 3321<br/>
 					<strong>BIC</strong> GEBA BE BB
 				</p>
