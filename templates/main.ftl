@@ -281,7 +281,11 @@
 								<span class="d-block mb-4">${reference.getText("subject")}</span>
 								${reference.getRichText("description").html}
 
-								<a class="u-link-v5 g-color-text g-color-primary--hover g-font-weight-700" href="${reference.getText("url")}" target="_blank">${reference.getText("url")}</a>
+								<#if reference.getText("url")??>
+									<a class="u-link-v5 g-color-text g-color-primary--hover g-font-weight-700" href="${reference.getText("url")}" target="_blank">
+										${reference.getText("url")}
+									</a>
+								</#if>
 							</div>
 						</div>
 					</div>
