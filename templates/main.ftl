@@ -447,6 +447,12 @@
 					<li class="my-2"><i class="mr-2 fa fa-angle-right"></i>
 						<a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="https://sleep.web-factor.be" target="_blank">Sleep Trainer</a>
 					</li>
+					<li class="my-2"><i class="mr-2 fa fa-angle-right"></i>
+						<a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="https://www.spintoppr.be" target="_blank">Spintoppr</a>
+					</li>
+					<li class="my-2"><i class="mr-2 fa fa-angle-right"></i>
+						<a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="https://www.pawmygod.shop" target="_blank">Paw My God!</a>
+					</li>
 				</ul>
 				<!-- End Links -->
 			</div>
