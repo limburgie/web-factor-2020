@@ -34,6 +34,22 @@
 			"inserts": {
 				"body": "pages/home.ftl"
 			}
+		},
+		{
+			"friendlyUrl": "terms",
+			"name": "Terms",
+			"template": "main",
+			"inserts": {
+				"body": "pages/terms.ftl"
+			}
+		},
+		{
+			"friendlyUrl": "privacy",
+			"name": "Privacy",
+			"template": "main",
+			"inserts": {
+				"body": "pages/privacy.ftl"
+			}
 		}
 	]
 }
