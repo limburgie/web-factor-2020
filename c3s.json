@@ -19,10 +19,10 @@
 	],
 
 	"errorPage": {
-		"name": "Fout",
+		"name": "Error",
 		"template": "main",
 		"inserts": {
-			"contents": "pages/error.ftl"
+			"body": "pages/error.ftl"
 		}
 	},
 
@@ -32,7 +32,7 @@
 			"name": "Home",
 			"template": "main",
 			"inserts": {
-				"contents": "pages/home.ftl"
+				"body": "pages/home.ftl"
 			}
 		}
 	]
