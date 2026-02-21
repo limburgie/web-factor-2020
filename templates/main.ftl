@@ -64,7 +64,7 @@
 
 					<!-- Navigation -->
 					<div class="collapse navbar-collapse align-items-center flex-sm-row" id="navBar" data-mobile-scroll-hide="true">
-						<ul class="js-scroll-nav navbar-nav text-uppercase g-letter-spacing-1 g-font-size-13 g-pt-20 g-pt-0--lg ml-auto">
+						<ul class="js-scroll-nav navbar-nav text-uppercase g-letter-spacing-1 g-font-size-14 g-pt-20 g-pt-0--lg ml-auto">
 							<li class="nav-item g-mr-15--lg g-mb-7 g-mb-0--lg">
 								<a href="#home" class="nav-link p-0">${i18n["home"]} <span class="sr-only">(current)</span></a>
 							</li>
@@ -82,11 +82,11 @@
 							</li>
 						</ul>
 					</div>
-					<div class="g-pos-abs g-top-18 g-right-65 g-pos-rel--lg g-top-0--lg g-right-0--lg g-width-50 g-ml-50 g-ml-12--lg g-font-size-13">
+					<div class="g-pos-abs g-top-18 g-right-65 g-pos-rel--lg g-top-0--lg g-right-0--lg g-width-50 g-ml-50 g-ml-12--lg g-font-size-14">
 						<a href="#" id="languages-dropdown-invoker-2" class="g-color-gray-dark-v3 g-text-underline--none--hover" aria-controls="languages-dropdown-2" aria-haspopup="true" aria-expanded="false" data-dropdown-event="click" data-dropdown-target="#languages-dropdown-2" data-dropdown-type="css-animation" data-dropdown-duration="500" data-dropdown-hide-on-scroll="false" data-dropdown-animation-in="fadeIn" data-dropdown-animation-out="fadeOut">
 							<i class="fa fa-globe"></i> ${request.locale.language?upper_case}&nbsp;<i class="fa fa-angle-down g-ml-3"></i>
 						</a>
-						<ul id="languages-dropdown-2" class="list-unstyled text-left u-shadow-v23 g-pos-abs g-left-0 g-bg-white g-width-75 g-z-index-2 g-py-20 g-pb-15 g-mt-25--lg g-mt-20--lg--scrolling u-dropdown--css-animation u-dropdown--hidden" aria-labelledby="languages-dropdown-invoker-2" style="animation-duration: 500ms; left: 0; margin-left: -6px">
+						<ul id="languages-dropdown-2" class="list-unstyled text-left u-shadow-v23 g-pos-abs g-left-0 g-bg-white g-width-75 g-z-index-2 g-py-20 g-pb-15 g-mt-25--lg g-mt-20--lg--scrolling u-dropdown--css-animation u-dropdown--hidden" aria-labelledby="languages-dropdown-invoker-2" style="animation-duration: 500ms; left: 0; margin-left: -6px; box-shadow: 0 3px 10px 10px rgba(0, 0, 0, 0.01);">
 							<#list site.locales as locale>
                                 <li>
                                     <a class="d-block g-color-main g-color-gray-dark-v3 g-color-primary--hover g-text-underline--none--hover g-py-8 g-px-20" href="${uri.ofCurrent(locale.language)}">
